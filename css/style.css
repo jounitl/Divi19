@@ -1,3 +1,8 @@
+/*!!!*/
+
+/*Etusivu & yleismääreet*/
+
+/*!!!*/
 body{
   background-color: #000c13;
   color: #fff;
@@ -9,7 +14,6 @@ body h1,h2,h3,h4{
   color: #fff;
   font-family: 'Ubuntu', sans-serif;
   font-weight:900;
-  line-height: 200%;
   margin-top: 50px;
 }
 a{color:#fff; text-decoration: none;}
@@ -19,7 +23,7 @@ p{font-size: 1em; line-height: 1.6;}
 
 
 /* Grid */
-.item1{grid-area: topmenu; background-color: #061E29 !important;
+.item-menu{grid-area: topmenu; background-color: #061E29 !important;
   }
 .item2{ grid-area: header;
         background-image: url("../kuvat/etusivutausta.jpg");
@@ -35,7 +39,7 @@ p{font-size: 1em; line-height: 1.6;}
         background-size:cover;
         background-position:center;}
 .item7{grid-area: igfeed;}
-.item8{grid-area: footer; background-color: #061E29 !important;
+.item-footer{grid-area: footer; background-color: #061E29 !important;
 }
 .grid-container{
   align-content: stretch;
@@ -64,10 +68,10 @@ p{font-size: 1em; line-height: 1.6;}
   margin-bottom: 50px;
 }
 .item4-content{
-margin-left: 10%;
-margin-right: 10%;
-margin-top: 50px;
-margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .item5-content{
   margin-left: 10%;
@@ -114,7 +118,7 @@ margin-bottom: 50px;
 .logo{
   width: 8em;
 }
-.item1 .icon {
+.item-menu .icon {
   display: none;
   float: right;
   font-size: 2em;
@@ -187,10 +191,10 @@ li{
 }
 /* Header liikkuva teksti korkeus, ettei sivu sekoile*/
 .nimi{
-min-height: 300px;
+min-height: 200px;
 width: 100%;
 }
-/* Painike & animaatio */
+/* Perus painike & animaatio */
 .button{
 	color: #fff;
 	background: none;
@@ -207,9 +211,148 @@ width: 100%;
 .button:hover {
   box-shadow: inset 50em 0 1em rgba(0, 128, 128, 1)
 }
+
+/* Lue lisää painike & animaatio */
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .button-luelisaa:before {
+  content: 'Lue lisää';
+}
+
+.read-more-state:checked ~ .button-luelisaa:before {
+  content: 'Näytä vähemmän';
+}
+.button-luelisaa {
+  color: #fff;
+	background: none;
+	border-radius: 0;
+	padding: 1em 2em;
+	/* letter-spacing: 0.1em; */
+	font-size: 0.8em;
+	transition: background-color 0.8s, box-shadow 0.4s, color 0.8s;
+	margin: 1.3em;
+  box-shadow: inset 0 0 1em rgba(0, 128, 128, 0.5), 0 0 1em rgba(0, 128, 128, 0.5);
+  border: #008080 solid 2px;
+  line-height: 8em;
+}
+
+.button-luelisaa:hover {
+  box-shadow: inset 50em 0 1em rgba(0, 128, 128, 1)
+}
+
+
 .haenytfooter{
 line-height: 1em;
 }
+
+
+/*!!!*/
+
+/*Opiskelu sivu*/
+
+/*!!!*/
+
+
+/* Grid */
+.item-menu{grid-area: topmenu; background-color: #061E29 !important;
+  }
+.item2-2{ grid-area: header2;
+        background-image: url("../kuvat/etusivutausta.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;}
+.item3-2{grid-area: mitateemme;}
+.item4-2{grid-area: opettajat;}
+.item5-2{grid-area: tietoakampuksesta;}
+.item6-2{ grid-area: tietoaopiskelusta;
+        background-image: url("../kuvat/opiskelutausta.png");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;}
+.item7-2{grid-area: opiskelijayhdistykset;}
+.item-footer{grid-area: footer; background-color: #061E29 !important;
+}
+.grid-container-2{
+  align-content: stretch;
+  display: grid;
+  grid-template-areas:
+  'topmenu topmenu'
+  'header2 header2'
+  'mitateemme mitateemme'
+  'opettajat opettajat'
+  'tietoakampuksesta tietoakampuksesta'
+  'tietoaopiskelusta tietoaopiskelusta'
+  'opiskelijayhdistykset opiskelijayhdistykset'
+  'footer footer';
+}
+/* sivun marginaalit */
+.item2-content-2{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+}
+.item3-content-2{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.item4-content-2{
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.item5-content-2{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.item6-content-2{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+.item7-content-2{
+  margin-left: 10%;
+  margin-right: 10%;
+    margin-bottom: 100px;
+}
+
+.grid-container-2 > div {
+  background-color: #000c13;
+  font-size: 1rem;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+/* Otsikko sivun juttuja */
+.otsikko{
+  margin-bottom: 40px;
+}
+.metkalogo{
+    height:60px;
+}
+.demonilogo{
+    width: 70px;
+}
+
 /* Media query */
 @media screen and (max-width: 750px){
 
@@ -234,7 +377,7 @@ line-height: 1em;
       width: 20%;
       margin:auto;
   }
-  /* .item1.responsive .icon {
+  /* .item-menu.responsive .icon {
   } */
 
   .topnav.responsive a {
@@ -246,7 +389,7 @@ line-height: 1em;
   .topnav a {
     display: none;
   }
-  .item1 a.icon {
+  .item-menu a.icon {
     display: block;
   }
   /* Headerin liikkuvan teksti boksin korkeus, ettei sivun sisältö hypi header tekstin vaihtuessa*/
@@ -254,8 +397,10 @@ line-height: 1em;
   min-height: 350px;
   width: 100%;
   }
+
 }
 @media screen and (min-width: 1080px){
+  /* ETUSIVUN marginaalit isoilla näytöillä */
 .grid-container{
     grid-template-areas:
     'topmenu topmenu'
@@ -292,23 +437,91 @@ line-height: 1em;
       margin-right: 20%;
     }
 
-        .footer-left{
-          float: left;
-          margin: 0;
-          margin-left: 10%;
-          text-align: left;
-        }
-        .footer-center{
-          float: left;
-          margin: 0;
+    /* OPISKELU sivun marginaalit isoilla näytöillä */
+        .item2-content-2{
           margin-left: 20%;
-  }
-        .footer-right{
-          float:right;
-          margin: 0;
-          margin-right: 10%;
-          text-align: left;
+          margin-right: 20%;
         }
+        .item3-content-2{
+          margin-left: 20%;
+          margin-right: 20%;
+        }
+        .item4-content-2{
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .item5-content-2{
+          margin-left: 20%;
+          margin-right: 20%;
+        }
+        .item6-content-2{
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .item7-content-2{
+          margin-left: 20%;
+          margin-right: 20%;
+        }
+        .tietoaopiskelusta1{
+          display: inline-block;
+          padding-right: 5%;
+          width: 30%;
+        }
+        .tietoaopiskelusta2{
+          display: inline-block;
+          padding-left: 5%;
+          width: 30%;
+        }
+
+        .ope1{
+          position: relative;
+          display: inline-block;
+          width: 33%;
+        }
+        .ope2{
+          position: relative;
+          display: inline-block;
+          width: 33%;
+        }
+        .ope3{
+          position: relative;
+          display: inline-block;
+          width: 33%;
+        }
+        .metka{
+        display: inline-block;
+
+        }
+        .demoni{
+        display: inline-block;
+        margin-right: 5%;
+        }
+
+    /* Footer isoilla näytöillä */
+    .footer-left{
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      top: -30px;
+      text-align: left;
+      width: 20%;
+    }
+    .footer-center{
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      top: -100px;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      width: 20%;
+    }
+    .footer-right{
+      display: inline-block;
+      margin: 0;
+      width: 20%;
+      text-align: left;
+    }
         .metropoliafooter{
           width: 10em;
           margin-top: 30px;
