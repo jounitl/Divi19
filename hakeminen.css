@@ -1,0 +1,406 @@
+body{
+  background-color: #000c13;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+  width: 100%;
+}
+body h1,h2,h3,h4{
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:900;
+  line-height: 200%;
+  margin-top: 50px;
+}
+a{color:#fff; text-decoration: none;}
+h1{font-size: 3.5em;}
+h2{font-size: 2em;}
+p{font-size: 1em; line-height: 1.6;}
+
+ul.b li::before {
+
+  content: "\00d7";
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.nosto {
+  color: #008080;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:900;
+  line-height:1em;
+  font-size:1.5em;
+  font-style:italic;
+
+}
+/* Grid */
+.item-menu{grid-area: topmenu; background-color: #061E29 !important;
+  }
+.item2-3{ grid-area: header;
+        background-image: url("../kuvat/etusivutausta.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;}
+.item3-3{grid-area: laskuri;}
+.item4-3{grid-area: ennakkotehtavat;}
+.item5-3{grid-area: linkkeja;}
+.item6-3{grid-area: hakijapalvelut;
+        background-image: url("../kuvat/opiskelutausta.png");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;}
+.item7-3{grid-area: paasykokeet18;}
+.tuukkakuva{grid-area: tuukkakuva;}
+.item8-3{grid-area: paasykokeet17;}
+
+.item-footer{grid-area: footer; background-color: #061E29 !important;
+}
+.grid-container{
+  align-content: stretch;
+  display: grid;
+  grid-template-areas:
+  'topmenu topmenu'
+  'header header'
+  'laskuri laskuri'
+  'ennakkotehtavat ennakkotehtavat'
+  'linkkeja linkkeja'
+  'hakijapalvelut hakijapalvelut'
+  'paasykokeet18 paasykokeet18'
+  'tuukkakuva tuukkakuva'
+  'paasykokeet17 paasykokeet17'
+  'footer footer';
+
+}
+/* sivun marginaalit */
+.item2-3-content{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+}
+.item3-3-content{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.item4-3-content{
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.item5-3-content{
+
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+
+}
+.item6-3-content{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+.item7-3-content{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.tuukkakuva{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.item8-3-content{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.grid-container > div {
+  background-color: #000c13;
+  font-size: 1rem;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+/* Navbar */
+.topnav {
+  float: right;
+  overflow: hidden;
+  margin-right: 50px;
+}
+.topnav a {
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 1rem;
+  margin-top: 2px;
+  padding: 25px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+.brand{
+  float: left;
+  margin: 10px 20% 0 50px;
+}
+.logo{
+  width: 8em;
+}
+.item-menu .icon {
+  display: none;
+  float: right;
+  font-size: 2em;
+  position: absolute;
+  right: 35px;
+  top: 20px;
+}
+.topnav a:hover{
+  color: white;
+}
+/* Menu animaatio */
+.topnav a::before {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 2px;
+    transition: width .3s;
+    width: 0;
+}
+.topnav a:hover::before {
+    width: 100%;
+}
+/* merkkaa aktiivisen sivun */
+.topnav .active::before {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+}
+/* Footer */
+.footer{
+margin-top: 20px;
+padding-left: 10%;
+padding-right: 10%;
+margin-bottom: 50px;
+}
+.footer-box li{
+  color: #fff;
+  font-size: 1em;
+  line-height: 2.2em;
+}
+.footer-box a:hover:not(.haenytfooter){
+  color:#008080;
+}
+.footer-left{
+margin-top: 50px;
+}
+.footer-center{
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.footer-right{
+  margin-bottom: 50px;
+}
+li{
+  list-style: none;
+}
+.metropoliafooter{
+  width: 15em;
+  margin-top: 30px;
+}
+
+/* Laskurin muotoilu */
+.laskuri{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5em;
+  font-weight:900;
+  margin-top: 10px;
+}
+/* Header liikkuva teksti korkeus, ettei sivu sekoile*/
+.nimi{
+min-height: 300px;
+width: 100%;
+}
+/* Painike & animaatio */
+.button{
+	color: #fff;
+	background: none;
+	border-radius: 0;
+	padding: 1em 2em;
+	/* letter-spacing: 0.1em; */
+	font-size: 0.8em;
+	transition: background-color 0.8s, box-shadow 0.4s, color 0.8s;
+	margin: 1.3em;
+  box-shadow: inset 0 0 1em rgba(0, 128, 128, 0.5), 0 0 1em rgba(0, 128, 128, 0.5);
+  border: #008080 solid 2px;
+  line-height: 8em;
+}
+.button:hover {
+  box-shadow: inset 50em 0 1em rgba(0, 128, 128, 1)
+}
+/* Lue lisää painike & animaatio */
+.button-luelisaa{
+  color: #fff;
+  background: none;
+  border-radius: 0;
+  padding: 1em 2em;
+  /* letter-spacing: 0.1em; */
+  font-size: 0.8em;
+  transition: background-color 0.8s, box-shadow 0.4s, color 0.8s;
+  margin: 1.3em;
+  box-shadow: inset 0 0 1em rgba(0, 128, 128, 0.5), 0 0 1em rgba(0, 128, 128, 0.5);
+  border: #008080 solid 2px;
+  line-height: 2em;
+}
+.button-luelisaa:hover {
+  box-shadow: inset 50em 0 1em rgba(0, 128, 128, 1)
+}
+
+
+
+.haenytfooter{
+line-height: 1em;
+}
+/* Media query */
+@media screen and (max-width: 750px){
+
+  /* Headerin liikkuvan teksti boksin korkeus, ettei sivun sisältö hypi header tekstin vaihtuessa*/
+  .nimi{
+    min-height: 400px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1080px) {
+ .topnav.responsive {
+    margin:0;
+    position: relative;
+    width: 100%;
+  }
+  /* merkkaa aktiivisen sivun */
+  .topnav .active::before {
+      background: #fff;
+      content: '';
+      display: block;
+      height: 2px;
+      width: 20%;
+      margin:auto;
+  }
+  /* .item-menu.responsive .icon {
+  } */
+
+  .topnav.responsive a {
+    display: block;
+    float: none;
+    text-align: center;
+    font-size: 2em;
+  }
+  .topnav a {
+    display: none;
+  }
+  .item-menu a.icon {
+    display: block;
+  }
+  /* Headerin liikkuvan teksti boksin korkeus, ettei sivun sisältö hypi header tekstin vaihtuessa*/
+  .nimi{
+  min-height: 350px;
+  width: 100%;
+  }
+}
+@media screen and (min-width: 1080px){
+.grid-container{
+    grid-template-areas:
+    'topmenu topmenu'
+    'header header'
+    'laskuri  ennakkotehtavat'
+    'linkkeja linkkeja'
+    'hakijapalvelut hakijapalvelut'
+    'paasykokeet18 paasykokeet18'
+    'tuukkakuva paasykokeet17'
+    'footer footer';
+    }
+    .item2-3-content{
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    .item3-3-content{
+      margin-left: 30%;
+      margin-right: 5%;
+
+    }
+    .item4-3-content{
+    margin-left: 5%;
+      margin-right: 30%;
+    }
+    .item5-3-content{
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    .item6-3-content{
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    .item7-3-content{
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    .tuukkakuva{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .item8-3-content{
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+
+
+    {
+        float: left;
+        margin-top: 5px;
+        margin-right: 10px;
+        opacity: 1;
+        margin-left: 0px;
+        visibility: hidden;
+    }
+
+        .footer-left{
+          float: left;
+          margin: 0;
+          margin-left: 10%;
+          text-align: left;
+        }
+        .footer-center{
+          float: left;
+          margin: 0;
+          margin-left: 20%;
+  }
+        .footer-right{
+          float:right;
+          margin: 0;
+          margin-right: 10%;
+          text-align: left;
+        }
+        .metropoliafooter{
+          width: 10em;
+          margin-top: 30px;
+        }
+  }
+@media screen and (min-width: 700px){
+  .footer-box li{
+    line-height: 2em;
+  }
+}
+
+.text{
+  color: #FAFAFA;
+}
+.dud{
+  color: #008080;
+}
